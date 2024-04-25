@@ -6,7 +6,6 @@ function smallestMissingPositiveInteger(nums) {
   let j = 0;
   for (let i = 0; i < n; i++) {
       if (nums[i] <= 0) {
-          // Swap non-positive integers to the left
           let temp = nums[i];
           nums[i] = nums[j];
           nums[j] = temp;
