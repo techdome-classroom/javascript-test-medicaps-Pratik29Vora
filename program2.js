@@ -13,7 +13,6 @@ function smallestMissingPositiveInteger(nums) {
       }
   }
 
-  // We will work only with positive integers from index j onwards
   for (let i = j; i < n; i++) {
       let index = Math.abs(nums[i]) - 1 + j;
       if (index < n && nums[index] > 0) {
