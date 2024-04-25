@@ -27,7 +27,7 @@ function smallestMissingPositiveInteger(nums) {
       }
   }
 
-  return n - j + 1;
+  return n  + 1;
 
 }
 
