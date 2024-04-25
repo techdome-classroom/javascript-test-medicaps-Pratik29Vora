@@ -1,6 +1,8 @@
 function longestSubstring(s) {
   // Implementation of longestSubstring function
   if (s.length === 0) return 0;
+    if (s.length === 1) return 1;
+
     let maxLength = 1;
     let currentLength = 1;
     let visited = {};
