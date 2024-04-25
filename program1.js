@@ -6,7 +6,7 @@ function longestSubstring(s) {
   let seen = {};
 
   while (end < s.length) {
-    const currentChar = str[end];
+    const currentChar = s[end];
     if (seen[currentChar]) {
       start = Math.max(start, seen[currentChar] + 1);
     }
