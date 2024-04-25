@@ -1,26 +1,21 @@
 function longestSubstring(s) {
   // Implementation of longestSubstring function
-  if (s.length === 0) return 0;
-    if (s.length === 1) return 1;
-
-    let maxLength = 1;
-    let currentLength = 1;
+  let maxLength = 0;
+    let currentLength = 0;
     let visited = {};
 
-    for (let i = 1; i < s.length; i++) {
+    for (let i = 0; i < s.length; i++) {
         let char = s[i];
-        let prevIndex = visited[char];
-
-        if (prevIndex == null || i - currentLength > prevIndex) {
+        if (visited[char] == null) {
             currentLength++;
         } else {
-            maxLength = Math.max(maxLength, currentLength);
-            currentLength = i - prevIndex;
+            currentLength = Math.min(i - visited[char], currentLength + 1);
         }
+        maxLength = Math.max(maxLength, currentLength);
         visited[char] = i;
     }
 
-    return Math.max(maxLength, currentLength);
+    return maxLength;
 }
 
 module.exports = { longestSubstring };
