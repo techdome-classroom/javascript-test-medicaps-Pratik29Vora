@@ -3,7 +3,6 @@ function smallestMissingPositiveInteger(nums) {
   
   let n = nums.length;
 
-  // First, we separate positive integers from non-positive integers
   let j = 0;
   for (let i = 0; i < n; i++) {
       if (nums[i] <= 0) {
